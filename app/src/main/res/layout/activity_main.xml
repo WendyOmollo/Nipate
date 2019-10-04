@@ -4,15 +4,24 @@
     android:layout_height="match_parent"
     >
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/musicalbackground" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="130dp"
+        android:layout_marginTop="130dp"
         android:text="Nipate"
         android:textSize="40sp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorTextIcons"
         android:textStyle="bold|italic" />
+
 
 
 </RelativeLayout>
