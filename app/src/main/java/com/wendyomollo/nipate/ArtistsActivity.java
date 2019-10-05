@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ArtistsActivity extends AppCompatActivity {
     @BindView(R.id.listView) ListView mListView;
+    @BindView(R.id.locationTextView) TextView mLocationTextView;
     private String [] artists = new String[] {"Kevo Simple Boy","Cute Boy","Samantha","Karesh","Opobae","Katumbo","Okonkwo",
             "Matoke man","BlankRoom","Rose Malaki","Ali Manxu","Chingweng"};
 
@@ -24,6 +26,7 @@ public class ArtistsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
+        mLocationTextView.setText("In "+ location +" we have the following artists:");
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
         mListView.setAdapter(adapter);
