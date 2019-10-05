@@ -7,6 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".ArtistsActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationTextView"
+        android:layout_alignParentTop="true"
+        />
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

@@ -21,11 +21,13 @@ public class ArtistsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
-        Intent intent = getIntent();
         ButterKnife.bind(this);
+        Intent intent = getIntent();
+        String location = intent.getStringExtra("location");
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
         mListView.setAdapter(adapter);
+
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
