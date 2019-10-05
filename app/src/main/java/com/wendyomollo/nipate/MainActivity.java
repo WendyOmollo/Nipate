@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFindArtists.setOnClickListener(this);
     }
     @Override
-    public void onClick(View view){
-    Intent intent = new Intent(this,ArtistsActivity.class);
-    startActivity(intent);
+        public void onClick(View view){
+        Intent intent = new Intent(this,ArtistsActivity.class);
+        startActivity(intent);
     }
 }
