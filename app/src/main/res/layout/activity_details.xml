@@ -28,5 +28,4 @@
         android:text="Go back"
         android:textColor="@color/colorPrimaryText" />
 
-
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.wendyomollo.nipate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,6 +35,9 @@ public class ArtistsActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                FragmentManager fm = getSupportFragmentManager();
+                DetailsActivity detailsActivity = new DetailsActivity();
+                detailsActivity.show(fm,"Sample Fragment");
 
             }
         });
