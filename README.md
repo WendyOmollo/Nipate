@@ -2,7 +2,7 @@
 
 ## Description
 This application targets local artists.It creates a platform for them to be known and their songs to be listened  to by the users of the application.
-It displays artists and the songs they have sung and also gives motivatio for users of the applicatio to support local artists.
+It displays artists and the songs they have sung and also gives motivation for users of the application to support local artists.
 
 ## Setup and Installation
 
