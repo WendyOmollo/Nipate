@@ -40,7 +40,7 @@ public class ArtistsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 FragmentManager fm = getSupportFragmentManager();
                 DetailsActivity detailsActivity = new DetailsActivity();
-//                detailsActivity.show(fm,"Sample Fragment");
+                detailsActivity.show(fm,"Sample Fragment");
 
             }
         });
