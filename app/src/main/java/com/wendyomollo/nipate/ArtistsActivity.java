@@ -1,6 +1,7 @@
 package com.wendyomollo.nipate;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
@@ -21,7 +22,9 @@ public class ArtistsActivity extends AppCompatActivity {
             "Matoke man","BlankRoom","Rose Malaki","Ali Manxu","Chingweng"};
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
         ButterKnife.bind(this);
@@ -37,7 +40,7 @@ public class ArtistsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 FragmentManager fm = getSupportFragmentManager();
                 DetailsActivity detailsActivity = new DetailsActivity();
-                detailsActivity.show(fm,"Sample Fragment");
+//                detailsActivity.show(fm,"Sample Fragment");
 
             }
         });
