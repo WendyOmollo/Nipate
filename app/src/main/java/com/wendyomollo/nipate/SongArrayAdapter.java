@@ -3,8 +3,6 @@ import android.widget.ArrayAdapter;
 
 import android.content.Context;
 
-import androidx.annotation.Nullable;
-
 public class SongArrayAdapter extends ArrayAdapter {
     private Context mContext;
     private String[] mArtists;
@@ -22,7 +20,6 @@ public class SongArrayAdapter extends ArrayAdapter {
         return mArtists.length;
     }
 
-    @Nullable
     @Override
     public Object getItem(int position) {
         String artist = mArtists[position];
