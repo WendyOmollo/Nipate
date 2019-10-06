@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +33,7 @@ public class ArtistsActivity extends AppCompatActivity {
         String location = intent.getStringExtra("location");
         mLocationTextView.setText("In "+ location +" we have the following artists:");
 
+
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
         mListView.setAdapter(adapter);
 
@@ -41,6 +43,7 @@ public class ArtistsActivity extends AppCompatActivity {
                 FragmentManager fm = getSupportFragmentManager();
                 DetailsActivity detailsActivity = new DetailsActivity();
                 detailsActivity.show(fm,"Sample Fragment");
+
 
             }
         });

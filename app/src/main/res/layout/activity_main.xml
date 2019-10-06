@@ -49,5 +49,4 @@
         android:text="See artists"
         android:textColor="@color/colorPrimaryText"/>
 
-
 </RelativeLayout>
