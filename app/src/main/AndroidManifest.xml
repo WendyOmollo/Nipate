@@ -19,8 +19,7 @@
         <activity android:name=".ArtistsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.wendyomollo.nipate.MainActivity">
-            </meta-data>
+                android:value="com.wendyomollo.nipate.MainActivity"></meta-data>
         </activity>
     </application>
 
