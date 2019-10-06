@@ -8,8 +8,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.DialogFragment;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 
 public class DetailsActivity extends DialogFragment {
 
