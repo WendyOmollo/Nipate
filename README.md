@@ -1,4 +1,4 @@
-## Nipate
+# Nipate
 
 ## Description
 This application targets local artists.It creates a platform for them to be known and their songs to be listened  to by the users of the application.
