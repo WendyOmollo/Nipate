@@ -23,7 +23,7 @@ public class ArtistsActivity extends AppCompatActivity {
             "Matoke man","BlankRoom","Rose Malaki","Ali Manxu","Chingweng"};
 
     private String [] songs = new String[]{"Mihadarati","Mafisi","Pendo la Jesus","Urembo gharama","Sisi Wenyewe","Katumbo dance",
-    "Kisii life","Katastrophiii","Kanisa Letu","Vijana","Pastor Bonoko"};
+    "Landlord","Kisii life","Katastrophiii","Kanisa Letu","Vijana","Pastor Bonoko"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,8 +37,10 @@ public class ArtistsActivity extends AppCompatActivity {
         mLocationTextView.setText("In "+ location +" we have the following artists.Click on an artist for more details:");
 
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
-        mListView.setAdapter(adapter);
+//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
+//        mListView.setAdapter(adapter);
+        SongArrayAdapter songArrayAdapter = new SongArrayAdapter(this, android.R.layout.simple_list_item_1, artists,songs);
+        mListView.setAdapter(songArrayAdapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
