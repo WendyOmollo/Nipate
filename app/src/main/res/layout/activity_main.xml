@@ -22,19 +22,18 @@
         android:textColor="@color/colorTextIcons"
         android:textSize="40sp"
         android:textStyle="bold|italic" />
+
     <EditText
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editText"
+        android:layout_above="@id/buttonView"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
         android:background="@color/colorTextIcons"
         android:hint="Enter location"
-        android:layout_above="@id/buttonView"
-        android:padding="7dp"
-        android:layout_marginBottom="5dp"
         android:inputType="text"
-        />
+        android:padding="7dp" />
 
     <Button
         android:id="@+id/buttonView"

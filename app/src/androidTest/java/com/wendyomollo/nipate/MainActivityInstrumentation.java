@@ -33,10 +33,10 @@ public class MainActivityInstrumentation {
     }
 
     @Test
-    public void locationIsSentToRestaurantsActivity() {
+    public void locationIsSentToArtistsActivity() {
         String location = "Nairobi";
         onView(withId(R.id.editText)).perform(typeText(location),closeSoftKeyboard());
-        try {                             // the sleep method requires to be checked and handled so we use try block
+        try {
             Thread.sleep(250);
         } catch (InterruptedException e){
             System.out.println("got interrupted!");
