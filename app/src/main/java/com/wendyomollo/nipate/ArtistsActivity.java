@@ -36,9 +36,6 @@ public class ArtistsActivity extends AppCompatActivity {
         String location = intent.getStringExtra("location");
         mLocationTextView.setText("In "+ location +" we have the following artists.Click on an artist for more details:");
 
-
-//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
-//        mListView.setAdapter(adapter);
         SongArrayAdapter songArrayAdapter = new SongArrayAdapter(this, android.R.layout.simple_list_item_1, artists,songs);
         mListView.setAdapter(songArrayAdapter);
 
