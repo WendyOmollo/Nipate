@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main.ui;
 import android.widget.ArrayAdapter;
 
 import android.content.Context;

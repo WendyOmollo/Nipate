@@ -1,17 +1,16 @@
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.wendyomollo.nipate.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

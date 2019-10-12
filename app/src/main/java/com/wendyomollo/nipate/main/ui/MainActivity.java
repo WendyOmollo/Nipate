@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.wendyomollo.nipate.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
