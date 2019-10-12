@@ -45,8 +45,6 @@ public class ArtistsActivity extends AppCompatActivity {
                 FragmentManager fm = getSupportFragmentManager();
                 DetailsActivity detailsActivity = new DetailsActivity();
                 detailsActivity.show(fm,"Sample Fragment");
-
-
             }
         });
 
