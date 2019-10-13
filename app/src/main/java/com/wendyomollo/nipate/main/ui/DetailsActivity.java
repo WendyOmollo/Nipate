@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.DialogFragment;
 
+import com.wendyomollo.nipate.R;
 
 
 public class DetailsActivity extends DialogFragment {
