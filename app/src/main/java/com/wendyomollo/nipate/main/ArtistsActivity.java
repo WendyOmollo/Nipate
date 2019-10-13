@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate.main.ui;
+package com.wendyomollo.nipate.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;

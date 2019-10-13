@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate.main.ui;
+package com.wendyomollo.nipate.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
