@@ -2,34 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wendyomollo.nipate">
 
-    <application
+    <application>
+
+    <activity
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-<<<<<<< HEAD
-        <activity android:name=".ArtistsActivity"></activity>
-        <activity android:name=".main.LoginActivity" />
-        <activity android:name=".MainActivity">
-=======
-        <activity android:name=".main.MainActivity">
->>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
+        android:theme="@style/AppTheme"
+        android:name="main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-=======
-        <activity android:name=".main.ArtistsActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.wendyomollo.nipate.main.MainActivity"></meta-data>
+        <activity android:name=".main.LoginActivity">
+
         </activity>
->>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
+
     </application>
 
 </manifest>
