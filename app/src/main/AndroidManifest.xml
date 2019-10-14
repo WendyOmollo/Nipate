@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 <<<<<<< HEAD
         <activity android:name=".ArtistsActivity"></activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".main.LoginActivity" />
         <activity android:name=".MainActivity">
 =======
         <activity android:name=".main.MainActivity">
