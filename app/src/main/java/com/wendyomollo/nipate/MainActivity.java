@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         mFindArtists.setOnClickListener(this);
 
-
     }
     @Override
         public void onClick(View view){
