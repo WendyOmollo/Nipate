@@ -9,15 +9,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    @BindView(R.id.buttonView) Button mFindArtists;
-    @BindView(R.id.editText) EditText mEditText;
-    @BindView(R.id.editText1) EditText getmEditText;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    @BindView(R.id.buttonView)
+    Button mFindArtists;
+    @BindView(R.id.editText)
+    EditText mEditText;
+    @BindView(R.id.editText1)
+    EditText getmEditText;
+    @BindView(R.id.loginLink) TextView login;
 
 
     @Override
@@ -26,10 +31,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mFindArtists.setOnClickListener(this);
-
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+            }
+        });
     }
     @Override
-        public void onClick(View view){
-
+    public void onClick(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
+
 }
