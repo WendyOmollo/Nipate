@@ -22,7 +22,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        mlogin.setOnClickListener(this);
+//        mlogin.setOnClickListener(this);
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,10 +33,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onClick(View view){
-        Intent intent = new Intent(LoginActivity.this,);
-
-
-    }
+//    @Override
+//    public void onClick(View view) {
+//        Intent intent = new Intent(LoginActivity.this,);
+//        startActivity(intent);
+//    }
 }
