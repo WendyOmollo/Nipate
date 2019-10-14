@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.buttonView) Button mFindArtists;
     @BindView(R.id.editText) EditText mEditText;
     @BindView(R.id.editText1) EditText getmEditText;
-    @BindView(R.id.spinner) Spinner spin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,18 +26,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mFindArtists.setOnClickListener(this);
-        spin = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.type,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin.setAdapter(adapter);
+
 
     }
     @Override
         public void onClick(View view){
-        Intent intent = new Intent(this,ArtistsActivity.class);
-        String location = mEditText.getText().toString();
-        intent.putExtra("location",location);
-        Toast.makeText(MainActivity.this,location,Toast.LENGTH_LONG).show();
-        startActivity(intent);
+
     }
 }
