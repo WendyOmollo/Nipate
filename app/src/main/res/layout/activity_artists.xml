@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:orientation="vertical"
     tools:context=".ArtistsActivity">
+=======
+    tools:context=".main.ui.ArtistsActivity">
+>>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
 
     <ImageView
         android:id="@+id/imageView"

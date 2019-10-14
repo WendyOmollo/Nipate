@@ -24,6 +24,7 @@
         android:textStyle="bold|italic" />
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/editText"
         android:layout_width="200dp"
         android:layout_height="40dp"
@@ -34,19 +35,39 @@
         android:textColorHint="@color/colorTextIcons" />
 
     <EditText
+=======
+>>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
+=======
+        android:id="@+id/editText"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/colorTextIcons"
+
+        />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+>>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
         android:layout_below="@id/editText"
         android:hint="Username"
         android:textColorHint="@color/colorTextIcons"
         android:layout_marginTop="15dp"
+<<<<<<< HEAD
         android:layout_marginBottom="5dp"
+=======
+>>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
         android:id="@+id/editText1"
         android:inputType="textPersonName"
         />
 
+<<<<<<< HEAD
     <RadioGroup
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -83,6 +104,16 @@
         android:hint="Password"
         android:inputType="textPassword|numberPassword"
         android:textColorHint="@color/colorTextIcons" />
+=======
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/editText1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:spinnerMode="dropdown" />
+>>>>>>> 2502c28175a561c2d891a5d3856040c9ff3a082f
 
     <Button
         android:id="@+id/buttonView"
