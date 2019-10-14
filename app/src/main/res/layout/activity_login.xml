@@ -45,7 +45,7 @@
         android:inputType="textPassword|numberPassword"
         android:textColorHint="@color/colorTextIcons" />
     <Button
-        android:id="@+id/buttonView"
+        android:id="@+id/loginButtonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
