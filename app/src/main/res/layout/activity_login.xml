@@ -64,7 +64,7 @@
         android:textColor="@color/colorTextIcons"
         android:textSize="14dp"
         android:textStyle="italic"
-        android:layout_below="@id/buttonView"
+        android:layout_below="@id/loginButtonView"
         android:id="@+id/signupLink"
         android:layout_centerInParent="true"
         android:layout_marginBottom="30dp"
