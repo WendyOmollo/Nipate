@@ -86,13 +86,29 @@
         android:id="@+id/buttonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@color/colorPrimaryLight"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:layout_alignParentBottom="true"
         android:layout_marginBottom="140dp"
-        android:text="See artists"
-        android:textColor="@color/colorPrimaryText"/>
+        android:text="Sign Up"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_below="@id/password"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        android:layout_below="@id/buttonView"
+        android:id="@+id/loginLink"
+        android:layout_marginBottom="55dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>
