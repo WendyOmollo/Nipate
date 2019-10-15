@@ -8,13 +8,13 @@ public class Thumbnails {
 
     @SerializedName("default")
     @Expose
-    private Default _default;
+    private com.wendyomollo.nipate.Default _default;
     @SerializedName("medium")
     @Expose
-    private Medium medium;
+    private com.wendyomollo.nipate.Medium medium;
     @SerializedName("high")
     @Expose
-    private High high;
+    private com.wendyomollo.nipate.High high;
 
     /**
      * No args constructor for use in serialization
@@ -29,34 +29,34 @@ public class Thumbnails {
      * @param high
      * @param medium
      */
-    public Thumbnails(Default _default, Medium medium, High high) {
+    public Thumbnails(com.wendyomollo.nipate.Default _default, com.wendyomollo.nipate.Medium medium, com.wendyomollo.nipate.High high) {
         super();
         this._default = _default;
         this.medium = medium;
         this.high = high;
     }
 
-    public Default getDefault() {
+    public com.wendyomollo.nipate.Default getDefault() {
         return _default;
     }
 
-    public void setDefault(Default _default) {
+    public void setDefault(com.wendyomollo.nipate.Default _default) {
         this._default = _default;
     }
 
-    public Medium getMedium() {
+    public com.wendyomollo.nipate.Medium getMedium() {
         return medium;
     }
 
-    public void setMedium(Medium medium) {
+    public void setMedium(com.wendyomollo.nipate.Medium medium) {
         this.medium = medium;
     }
 
-    public High getHigh() {
+    public com.wendyomollo.nipate.High getHigh() {
         return high;
     }
 
-    public void setHigh(High high) {
+    public void setHigh(com.wendyomollo.nipate.High high) {
         this.high = high;
     }
 

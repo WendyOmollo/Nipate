@@ -17,16 +17,16 @@ public class Video {
     private String etag;
     @SerializedName("snippet")
     @Expose
-    private Snippet snippet;
+    private com.wendyomollo.nipate.Snippet snippet;
     @SerializedName("contentDetails")
     @Expose
-    private ContentDetails contentDetails;
+    private com.wendyomollo.nipate.ContentDetails contentDetails;
     @SerializedName("statistics")
     @Expose
-    private Statistics statistics;
+    private com.wendyomollo.nipate.Statistics statistics;
     @SerializedName("status")
     @Expose
-    private Status status;
+    private com.wendyomollo.nipate.Status status;
 
     /**
      * No args constructor for use in serialization
@@ -45,7 +45,7 @@ public class Video {
      * @param kind
      * @param statistics
      */
-    public Video(String id, String kind, String etag, Snippet snippet, ContentDetails contentDetails, Statistics statistics, Status status) {
+    public Video(String id, String kind, String etag, com.wendyomollo.nipate.Snippet snippet, com.wendyomollo.nipate.ContentDetails contentDetails, com.wendyomollo.nipate.Statistics statistics, com.wendyomollo.nipate.Status status) {
         super();
         this.id = id;
         this.kind = kind;
@@ -80,35 +80,35 @@ public class Video {
         this.etag = etag;
     }
 
-    public Snippet getSnippet() {
+    public com.wendyomollo.nipate.Snippet getSnippet() {
         return snippet;
     }
 
-    public void setSnippet(Snippet snippet) {
+    public void setSnippet(com.wendyomollo.nipate.Snippet snippet) {
         this.snippet = snippet;
     }
 
-    public ContentDetails getContentDetails() {
+    public com.wendyomollo.nipate.ContentDetails getContentDetails() {
         return contentDetails;
     }
 
-    public void setContentDetails(ContentDetails contentDetails) {
+    public void setContentDetails(com.wendyomollo.nipate.ContentDetails contentDetails) {
         this.contentDetails = contentDetails;
     }
 
-    public Statistics getStatistics() {
+    public com.wendyomollo.nipate.Statistics getStatistics() {
         return statistics;
     }
 
-    public void setStatistics(Statistics statistics) {
+    public void setStatistics(com.wendyomollo.nipate.Statistics statistics) {
         this.statistics = statistics;
     }
 
-    public Status getStatus() {
+    public com.wendyomollo.nipate.Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public void setStatus(com.wendyomollo.nipate.Status status) {
         this.status = status;
     }
 
