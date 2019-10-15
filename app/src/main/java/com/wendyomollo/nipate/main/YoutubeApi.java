@@ -1,5 +1,17 @@
 package com.wendyomollo.nipate.main;
 
-public interface YoutubeApi {
+import com.wendyomollo.nipate.ArtistSearch;
 
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
+
+public interface YoutubeApi {
+    String YOUTUBE_BASE_URL = "https://www.youtube.com/";
+    @GET("videos/search")
+    Call<ArtistSearch> getVideos(
+            @Query("id") String id,
+            @Query("contentDetails") String contentDetails
+
+    );
 }
