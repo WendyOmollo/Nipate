@@ -1,5 +1,5 @@
 
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -8,13 +8,13 @@ public class Thumbnails {
 
     @SerializedName("default")
     @Expose
-    private com.wendyomollo.nipate.Default _default;
+    private Default _default;
     @SerializedName("medium")
     @Expose
-    private com.wendyomollo.nipate.Medium medium;
+    private Medium medium;
     @SerializedName("high")
     @Expose
-    private com.wendyomollo.nipate.High high;
+    private High high;
 
     /**
      * No args constructor for use in serialization
@@ -29,34 +29,34 @@ public class Thumbnails {
      * @param high
      * @param medium
      */
-    public Thumbnails(com.wendyomollo.nipate.Default _default, com.wendyomollo.nipate.Medium medium, com.wendyomollo.nipate.High high) {
+    public Thumbnails(Default _default, Medium medium, High high) {
         super();
         this._default = _default;
         this.medium = medium;
         this.high = high;
     }
 
-    public com.wendyomollo.nipate.Default getDefault() {
+    public Default getDefault() {
         return _default;
     }
 
-    public void setDefault(com.wendyomollo.nipate.Default _default) {
+    public void setDefault(Default _default) {
         this._default = _default;
     }
 
-    public com.wendyomollo.nipate.Medium getMedium() {
+    public Medium getMedium() {
         return medium;
     }
 
-    public void setMedium(com.wendyomollo.nipate.Medium medium) {
+    public void setMedium(Medium medium) {
         this.medium = medium;
     }
 
-    public com.wendyomollo.nipate.High getHigh() {
+    public High getHigh() {
         return high;
     }
 
-    public void setHigh(com.wendyomollo.nipate.High high) {
+    public void setHigh(High high) {
         this.high = high;
     }
 

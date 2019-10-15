@@ -1,5 +1,5 @@
 
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -15,7 +15,7 @@ public class ArtistSearch {
     private String etag;
     @SerializedName("videos")
     @Expose
-    private List<com.wendyomollo.nipate.Video> videos = null;
+    private List<Video> videos = null;
 
     /**
      * No args constructor for use in serialization
@@ -30,7 +30,7 @@ public class ArtistSearch {
      * @param videos
      * @param kind
      */
-    public ArtistSearch(String kind, String etag, List<com.wendyomollo.nipate.Video> videos) {
+    public ArtistSearch(String kind, String etag, List<Video> videos) {
         super();
         this.kind = kind;
         this.etag = etag;
@@ -53,11 +53,11 @@ public class ArtistSearch {
         this.etag = etag;
     }
 
-    public List<com.wendyomollo.nipate.Video> getVideos() {
+    public List<Video> getVideos() {
         return videos;
     }
 
-    public void setVideos(List<com.wendyomollo.nipate.Video> videos) {
+    public void setVideos(List<Video> videos) {
         this.videos = videos;
     }
 

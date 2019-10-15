@@ -1,7 +1,5 @@
 package com.wendyomollo.nipate.main;
 
-import com.wendyomollo.nipate.ArtistSearch;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

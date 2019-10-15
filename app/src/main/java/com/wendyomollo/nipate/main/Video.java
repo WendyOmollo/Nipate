@@ -1,5 +1,5 @@
 
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.main;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -17,16 +17,16 @@ public class Video {
     private String etag;
     @SerializedName("snippet")
     @Expose
-    private com.wendyomollo.nipate.Snippet snippet;
+    private Snippet snippet;
     @SerializedName("contentDetails")
     @Expose
-    private com.wendyomollo.nipate.ContentDetails contentDetails;
+    private ContentDetails contentDetails;
     @SerializedName("statistics")
     @Expose
-    private com.wendyomollo.nipate.Statistics statistics;
+    private Statistics statistics;
     @SerializedName("status")
     @Expose
-    private com.wendyomollo.nipate.Status status;
+    private Status status;
 
     /**
      * No args constructor for use in serialization
@@ -45,7 +45,7 @@ public class Video {
      * @param kind
      * @param statistics
      */
-    public Video(String id, String kind, String etag, com.wendyomollo.nipate.Snippet snippet, com.wendyomollo.nipate.ContentDetails contentDetails, com.wendyomollo.nipate.Statistics statistics, com.wendyomollo.nipate.Status status) {
+    public Video(String id, String kind, String etag, Snippet snippet, ContentDetails contentDetails, Statistics statistics, Status status) {
         super();
         this.id = id;
         this.kind = kind;
@@ -80,35 +80,35 @@ public class Video {
         this.etag = etag;
     }
 
-    public com.wendyomollo.nipate.Snippet getSnippet() {
+    public Snippet getSnippet() {
         return snippet;
     }
 
-    public void setSnippet(com.wendyomollo.nipate.Snippet snippet) {
+    public void setSnippet(Snippet snippet) {
         this.snippet = snippet;
     }
 
-    public com.wendyomollo.nipate.ContentDetails getContentDetails() {
+    public ContentDetails getContentDetails() {
         return contentDetails;
     }
 
-    public void setContentDetails(com.wendyomollo.nipate.ContentDetails contentDetails) {
+    public void setContentDetails(ContentDetails contentDetails) {
         this.contentDetails = contentDetails;
     }
 
-    public com.wendyomollo.nipate.Statistics getStatistics() {
+    public Statistics getStatistics() {
         return statistics;
     }
 
-    public void setStatistics(com.wendyomollo.nipate.Statistics statistics) {
+    public void setStatistics(Statistics statistics) {
         this.statistics = statistics;
     }
 
-    public com.wendyomollo.nipate.Status getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(com.wendyomollo.nipate.Status status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
