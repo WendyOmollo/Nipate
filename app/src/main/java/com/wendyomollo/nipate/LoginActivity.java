@@ -13,31 +13,31 @@ import com.wendyomollo.nipate.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.signupLink)
     TextView signup;
     @BindView(R.id.loginButtonView)
     Button mlogin;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-//        mlogin.setOnClickListener(this);
+        mlogin.setOnClickListener(this);
 
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+//        signup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
-//    @Override
-//    public void onClick(View view) {
-//        Intent intent = new Intent(LoginActivity.this,);
-//        startActivity(intent);
-//    }
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(LoginActivity.this,);
+        startActivity(intent);
+    }
 }
