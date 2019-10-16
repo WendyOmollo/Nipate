@@ -17,7 +17,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    buildTypes{
+    buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -25,7 +25,7 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField 'String','YOUTUBE_API_KEY' , YoutubeApiKey
+        it.buildConfigField 'String', 'YOUTUBE_API_KEY', YoutubeApiKey
     }
 
 }
