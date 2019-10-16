@@ -20,6 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wendyomollo.nipate.MainActivity">
+            </meta-data>
 
         </activity>
 
