@@ -4,30 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.ui.DetailsActivity">
+    tools:context="main.DetailsActivity">
 
-    <TextView
-        android:layout_marginTop="30dp"
-        android:id="@+id/autoCompleteText"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="A good artist in the making.Needs support to achieve the artist vision"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:textColor="@color/colorPrimaryText"/>
-
-    <Button
-        android:id="@+id/artistButtonView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/autoCompleteText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:background="@color/colorPrimaryLight"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="Go back"
-        android:textColor="@color/colorPrimaryText" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        />
 
 </RelativeLayout>
