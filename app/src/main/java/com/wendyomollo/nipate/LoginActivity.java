@@ -43,6 +43,5 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         Intent intent = new Intent(LoginActivity.this,ArtistsActivity.class);
         startActivity(intent);
-
     }
 }

@@ -1,6 +1,7 @@
 package com.wendyomollo.nipate;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ArtistsActivity extends AppCompatActivity {
+public class ArtistsActivity extends Activity {
 
 
     @Override
@@ -31,7 +32,5 @@ public class ArtistsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
         Intent intent = getIntent();
-
-
     }
 }

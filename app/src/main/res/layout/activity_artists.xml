@@ -38,6 +38,19 @@
         android:textColorHint="@color/colorPrimaryText"
         android:background="@color/colorTextIcons"
         android:textColor="@color/colorTextIcons"/>
+    <Button
+        android:id="@+id/findArtistButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimaryLight"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Login"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_below="@id/artistLocation"
+        />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -54,5 +67,6 @@
         android:layout_centerInParent="true"
         android:layout_margin="16dp"
         android:visibility="gone" />
+
 
 </RelativeLayout>
