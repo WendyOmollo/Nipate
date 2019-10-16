@@ -3,13 +3,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
 import com.wendyomollo.nipate.R;
+import com.wendyomollo.nipate.SongArrayAdapter;
 
 import java.util.List;
 
@@ -19,8 +22,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ArtistsActivity extends AppCompatActivity {
-    @BindView(R.id.grid)
-    GridLayout mGriddy;
+    @BindView(R.id.listView)
+    ListView mListView;
     @BindView(R.id.errorTextView)
     TextView mErrorTextView;
     @BindView(R.id.progressBar)
@@ -47,8 +50,8 @@ public class ArtistsActivity extends AppCompatActivity {
                         artists[i] = videoList.get(i).getKind();
                     }
 
-                    GridView view = new GridView(ArtistsActivity.this);
-                    mGriddy.addView(view);
+                    ArrayAdapter adapter = new SongArrayAdapter(ArtistsActivity.this,android.R.layout.simple_list_item_1,artists);
+                    mListView.setAdapter(adapter);
                     showVideos();
                 } else {
                     showUnsuccessfulMessage();
@@ -73,7 +76,7 @@ public class ArtistsActivity extends AppCompatActivity {
     }
 
     private void showVideos() {
-        mGriddy.setVisibility(View.VISIBLE);
+        mListView.setVisibility(View.VISIBLE);
     }
 
     private void hideProgressBar() {

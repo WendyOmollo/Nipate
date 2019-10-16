@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate.main;
+package com.wendyomollo.nipate;
 import android.widget.ArrayAdapter;
 
 import android.content.Context;
@@ -6,13 +6,13 @@ import android.content.Context;
 public class SongArrayAdapter extends ArrayAdapter {
     private Context mContext;
     private String[] mArtists;
-    private String[] mSongs;
 
-    public SongArrayAdapter(Context mContext,int resource,String[] mArtists,String[] mSongs){
+
+    public SongArrayAdapter(Context mContext,int resource,String[] mArtists){
         super(mContext, resource);
         this.mContext = mContext;
         this.mArtists=mArtists;
-        this.mSongs=mSongs;
+
     }
 
     @Override
@@ -23,7 +23,6 @@ public class SongArrayAdapter extends ArrayAdapter {
     @Override
     public Object getItem(int position) {
         String artist = mArtists[position];
-        String song = mSongs[position];
-        return String.format("%s \n Sang: %s", artist, song);
+        return String.format("%s", artist);
     }
 }
