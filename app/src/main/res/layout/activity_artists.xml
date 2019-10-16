@@ -45,9 +45,10 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="@color/colorPrimaryLight"
+        android:layout_marginTop="15dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:text="Login"
+        android:text="Find Artists"
         android:textColor="@color/colorPrimaryText"
         android:layout_below="@id/artistLocation"
         />
