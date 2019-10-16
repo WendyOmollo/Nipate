@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(LoginActivity.this,);
+        Intent intent = new Intent(LoginActivity.this,ArtistsActivity.class);
         startActivity(intent);
     }
 }
