@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.buttonView)
-    Button mFindArtists;
+    Button mGoToLogin;
     @BindView(R.id.editText)
     EditText mEditText;
     @BindView(R.id.editText1)
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mFindArtists.setOnClickListener(this);
+        mGoToLogin.setOnClickListener(this);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
