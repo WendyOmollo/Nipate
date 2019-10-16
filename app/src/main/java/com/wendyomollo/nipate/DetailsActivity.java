@@ -32,7 +32,7 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        com.wendyomollo.nipate.main.YoutubeApi client = com.wendyomollo.nipate.main.YoutubeClient.getClient();
+        com.wendyomollo.nipate.YoutubeApi client = com.wendyomollo.nipate.YoutubeClient.getClient();
         Call<ArtistSearch> call = client.getVideos("id", "contentDetails");
 
         call.enqueue(new Callback<ArtistSearch>() {
