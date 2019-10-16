@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate.main;
+package com.wendyomollo.nipate;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +7,7 @@ import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 
 import com.wendyomollo.nipate.R;
 
@@ -31,15 +32,15 @@ public class ArtistsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_artists);
 
 
-        YoutubeApi client = YoutubeClient.getClient();
-        Call<ArtistSearch> call = client.getVideos("id", "contentDetails");
+        com.wendyomollo.nipate.main.YoutubeApi client = com.wendyomollo.nipate.main.YoutubeClient.getClient();
+        Call<com.wendyomollo.nipate.main.ArtistSearch> call = client.getVideos("id", "contentDetails");
 
-        call.enqueue(new Callback<ArtistSearch>() {
+        call.enqueue(new Callback<com.wendyomollo.nipate.main.ArtistSearch>() {
             @Override
-            public void onResponse(Call<ArtistSearch> call, Response<ArtistSearch> response) {
+            public void onResponse(Call<com.wendyomollo.nipate.main.ArtistSearch> call, Response<com.wendyomollo.nipate.main.ArtistSearch> response) {
                 hideProgressBar();
                 if (response.isSuccessful()) {
-                    List<Video> videoList= response.body().getVideos();
+                    List<com.wendyomollo.nipate.main.Video> videoList= response.body().getVideos();
                     String[] artists = new String[videoList.size()];
 
                     for (int i = 0; i < artists.length; i++) {
@@ -55,7 +56,7 @@ public class ArtistsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ArtistSearch> call, Throwable t) {
+            public void onFailure(Call<com.wendyomollo.nipate.main.ArtistSearch> call, Throwable t) {
                 hideProgressBar();
                 showFailureMessage();
             }

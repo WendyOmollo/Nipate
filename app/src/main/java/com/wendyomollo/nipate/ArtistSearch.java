@@ -4,6 +4,7 @@ package com.wendyomollo.nipate.main;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.wendyomollo.nipate.main.Video;
 
 public class ArtistSearch {
 
