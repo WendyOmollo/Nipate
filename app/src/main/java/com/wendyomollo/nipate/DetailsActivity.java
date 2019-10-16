@@ -1,5 +1,6 @@
 package com.wendyomollo.nipate;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -19,7 +20,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class DetailsActivity extends AppCompatActivity {
+public class DetailsActivity extends Activity {
 
     @BindView(R.id.listView)
     ListView mListView;
