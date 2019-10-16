@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate.main;
+package com.wendyomollo.nipate;
 
 import androidx.appcompat.app.AppCompatActivity;
 

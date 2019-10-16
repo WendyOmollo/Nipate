@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate.main;
+package com.wendyomollo.nipate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.wendyomollo.nipate.R;
+import com.wendyomollo.nipate.LoginActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
