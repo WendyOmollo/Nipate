@@ -9,9 +9,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.wendyomollo.nipate.ArtistsActivity;
-import com.wendyomollo.nipate.R;
-import com.wendyomollo.nipate.SongArrayAdapter;
+import com.wendyomollo.nipate.models.ArtistSearch;
+import com.wendyomollo.nipate.models.Video;
 
 import java.util.List;
 import butterknife.BindView;
@@ -34,14 +33,14 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
         com.wendyomollo.nipate.main.YoutubeApi client = com.wendyomollo.nipate.main.YoutubeClient.getClient();
-        Call<com.wendyomollo.nipate.main.ArtistSearch> call = client.getVideos("id", "contentDetails");
+        Call<ArtistSearch> call = client.getVideos("id", "contentDetails");
 
-        call.enqueue(new Callback<com.wendyomollo.nipate.main.ArtistSearch>() {
+        call.enqueue(new Callback<ArtistSearch>() {
             @Override
-            public void onResponse(Call<com.wendyomollo.nipate.main.ArtistSearch> call, Response<com.wendyomollo.nipate.main.ArtistSearch> response) {
+            public void onResponse(Call<ArtistSearch> call, Response<ArtistSearch> response) {
                 hideProgressBar();
                 if (response.isSuccessful()) {
-                    List<com.wendyomollo.nipate.main.Video> videoList= response.body().getVideos();
+                    List<Video> videoList= response.body().getVideos();
                     String[] artists = new String[videoList.size()];
 
                     for (int i = 0; i < artists.length; i++) {
@@ -57,7 +56,7 @@ public class DetailsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<com.wendyomollo.nipate.main.ArtistSearch> call, Throwable t) {
+            public void onFailure(Call<ArtistSearch> call, Throwable t) {
                 hideProgressBar();
                 showFailureMessage();
             }
@@ -84,4 +83,3 @@ public class DetailsActivity extends AppCompatActivity {
 
 }
 
-}

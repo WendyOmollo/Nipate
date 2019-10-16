@@ -1,10 +1,10 @@
 
-package com.wendyomollo.nipate.main;
+package com.wendyomollo.nipate.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Default {
+public class Medium {
 
     @SerializedName("url")
     @Expose
@@ -14,14 +14,14 @@ public class Default {
      * No args constructor for use in serialization
      * 
      */
-    public Default() {
+    public Medium() {
     }
 
     /**
      * 
      * @param url
      */
-    public Default(String url) {
+    public Medium(String url) {
         super();
         this.url = url;
     }
