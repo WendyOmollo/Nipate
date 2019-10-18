@@ -7,10 +7,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface YoutubeApi {
-    String YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/videos";
-    @GET("/videos{id}")
+    String YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search?";
+    @GET("part=snippet&q=songs")
     Call<ArtistSearch> getVideos(
-            @Query("id") String id,
-            @Query("contentDetails") String contentDetails
     );
 }

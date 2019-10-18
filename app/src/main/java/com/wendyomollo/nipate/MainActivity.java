@@ -10,9 +10,6 @@ import android.widget.EditText;
 
 import android.widget.TextView;
 
-import com.wendyomollo.nipate.R;
-import com.wendyomollo.nipate.LoginActivity;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -34,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, loginActivity.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, loginActivity.class);
         startActivity(intent);
     }
 

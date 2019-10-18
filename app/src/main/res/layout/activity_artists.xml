@@ -7,67 +7,49 @@
     android:orientation="vertical"
     tools:context="ArtistsActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/singing"
-        />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/singing"
+            />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="135dp"
             android:text="Artists"
             android:textColor="@color/colorTextIcons"
             android:textSize="40sp"
             android:textStyle="bold|italic" />
 
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/textView"
+            />
 
-    <EditText
-        android:id="@+id/artistLocation"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:hint="Enter artist's name"
-        android:inputType="textNoSuggestions"
-        android:textColorHint="@color/colorPrimaryText"
-        android:background="@color/colorTextIcons"
-        android:textColor="@color/colorTextIcons"/>
-    <Button
-        android:id="@+id/findArtistButtonView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@color/colorPrimaryLight"
-        android:layout_marginTop="15dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:text="Find Artists"
-        android:textColor="@color/colorPrimaryText"
-        android:layout_below="@id/artistLocation"
-        />
 
     <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="gone"/>
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
 
-    <TextView
-        android:id="@+id/errorTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="16dp"
-        android:visibility="gone" />
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:visibility="gone" />
 
 
 </RelativeLayout>

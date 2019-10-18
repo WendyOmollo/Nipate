@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     tools:context="DetailsActivity">
 
-    <ListView
-        android:id="@+id/listView"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/singing"
+        />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        />
+        android:layout_marginLeft="135dp"
+        android:text="Nipate"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="40sp"
+        android:textStyle="bold|italic" />
+
 
 </RelativeLayout>

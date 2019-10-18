@@ -1,7 +1,5 @@
 package com.wendyomollo.nipate;
 
-import com.wendyomollo.nipate.YoutubeApi;
-
 import java.io.IOException;
 
 import okhttp3.Interceptor;
@@ -11,8 +9,9 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.wendyomollo.nipate.main.Constants.YOUTUBE_API_KEY;
-import static com.wendyomollo.nipate.main.Constants.YOUTUBE_BASE_URL;
+import static com.wendyomollo.nipate.Constants.YOUTUBE_API_KEY;
+import static com.wendyomollo.nipate.YoutubeApi.YOUTUBE_BASE_URL;
+
 
 public class YoutubeClient {
     private static Retrofit retrofit = null;
