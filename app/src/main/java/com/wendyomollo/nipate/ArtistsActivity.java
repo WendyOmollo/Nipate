@@ -1,57 +1,42 @@
 package com.wendyomollo.nipate;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
-
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ArtistsActivity extends AppCompatActivity {
-    @BindView(R.id.listView) ListView mListView;
-    @BindView(R.id.locationTextView) TextView mLocationTextView;
-    private String [] artists = new String[] {"Kevo Simple Boy","Cute Boy","Samantha","Karesh","Opobae","Katumbo","Okonkwo",
-            "Matoke man","BlankRoom","Rose Malaki","Ali Manxu","Chingweng"};
 
-    private String [] songs = new String[]{"Mihadarati","Mafisi","Pendo la Jesus","Urembo gharama","Sisi Wenyewe","Katumbo dance",
-    "Landlord","Kisii life","Katastrophiii","Kanisa Letu","Vijana","Pastor Bonoko"};
+public class ArtistsActivity extends Activity {
 
+        @BindView(R.id.errorTextView)
+        TextView mErrorTextView;
+        @BindView(R.id.progressBar)
+        ProgressBar mProgressBar;
+
+        private ImageView imageView1;
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_artists);
         ButterKnife.bind(this);
         Intent intent = getIntent();
-        String location = intent.getStringExtra("location");
-        mLocationTextView.setText("In "+ location +" we have the following artists.Click on an artist for more details:");
 
-
-//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, artists);
-//        mListView.setAdapter(adapter);
-        SongArrayAdapter songArrayAdapter = new SongArrayAdapter(this, android.R.layout.simple_list_item_1, artists,songs);
-        mListView.setAdapter(songArrayAdapter);
-
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        imageView1 = findViewById(R.id.artist1);
+        imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                FragmentManager fm = getSupportFragmentManager();
-                DetailsActivity detailsActivity = new DetailsActivity();
-                detailsActivity.show(fm,"Sample Fragment");
 
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ArtistsActivity.this,DetailsActivity.class);
+                startActivity(intent1);
 
             }
         });
 
-    }
+        }
 }

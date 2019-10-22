@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Nipate</string>
     <string name="nipate">Nipate</string>
+    <string-array name="type">
+        <item>Singer</item>
+        <item>Rapper</item>
+    </string-array>
 </resources>
