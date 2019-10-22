@@ -25,7 +25,7 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField 'String', 'YOUTUBE_API_KEY', YoutubeApiKey
+        it.buildConfigField 'String', 'API_KEY', key
     }
 
 }
@@ -39,9 +39,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation "com.google.android.material:material:1.0.0"
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 }

@@ -9,12 +9,12 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.wendyomollo.nipate.Constants.YOUTUBE_API_KEY;
-import static com.wendyomollo.nipate.YoutubeApi.YOUTUBE_BASE_URL;
+import static com.wendyomollo.nipate.BuildConfig.API_KEY;
 
 
 public class YoutubeClient {
     private static Retrofit retrofit = null;
+    private static String YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/watch?";
 
     public static YoutubeApi getClient() {
         if(retrofit == null){
@@ -23,7 +23,7 @@ public class YoutubeClient {
                         @Override
                         public Response intercept(Chain chain) throws IOException {
                            Request newRequest = chain.request().newBuilder()
-                                   .addHeader("Authorization",YOUTUBE_API_KEY)
+                                   .addHeader("Authorization",API_KEY)
                                    .build();
                             return chain.proceed(newRequest);
                         }

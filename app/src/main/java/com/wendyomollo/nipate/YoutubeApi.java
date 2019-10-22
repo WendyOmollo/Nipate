@@ -1,14 +1,8 @@
 package com.wendyomollo.nipate;
 
-import com.wendyomollo.nipate.models.ArtistSearch;
-
-import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface YoutubeApi {
-    String YOUTUBE_BASE_URL = "https://www.googleapis.com/youtube/v3/search?";
-    @GET("part=snippet&q=songs")
-    Call<ArtistSearch> getVideos(
-    );
+    public static final String YOUTUBE_BASE_URL ="https://www.googleapis.com/youtube/v3";
 }
