@@ -32,7 +32,7 @@
         android:textColorHint="@color/colorTextIcons"
         android:layout_marginTop="15dp"
         android:id="@+id/editText1"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         />
     <EditText
         android:id="@+id/password"
@@ -42,7 +42,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:hint="Password"
-        android:inputType="textPassword|numberPassword"
+        android:inputType="textPassword"
         android:textColorHint="@color/colorTextIcons" />
     <Button
         android:id="@+id/loginButtonView"
