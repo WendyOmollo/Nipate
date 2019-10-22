@@ -7,10 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class loginActivity extends Activity implements View.OnClickListener {
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+
     @BindView(R.id.signupLink)
     TextView signup;
     @BindView(R.id.loginButtonView)
@@ -24,12 +31,24 @@ public class loginActivity extends Activity implements View.OnClickListener {
         ButterKnife.bind(this);
         mlogin.setOnClickListener(this);
 
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser() == null){
+                    Intent  registerIntent = new Intent(loginActivity.this,MainActivity.class);
+                    registerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(registerIntent);
+                }
+            }
+        };
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(loginActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
@@ -38,5 +57,8 @@ public class loginActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         Intent intent = new Intent(loginActivity.this,ArtistsActivity.class);
         startActivity(intent);
+        finish();
     }
+
+
 }
