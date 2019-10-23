@@ -22,7 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -84,13 +84,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
                     if(task.isSuccessful()){
-
-//                        String user_id = mAuth.getCurrentUser().getUid();
-//                        DatabaseReference current_user_db = mDatabase.child(user_id);
-//
-//                        current_user_db.child("name").setValue(name);
-//                        current_user_db.child("email").setValue(email);
-//
                         mProgress.dismiss();
                         Toast.makeText(MainActivity.this,"Authentication successful",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(MainActivity.this, loginActivity.class);
