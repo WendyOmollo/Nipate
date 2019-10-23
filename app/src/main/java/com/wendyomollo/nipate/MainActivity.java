@@ -69,9 +69,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
        final String email = mEditEmail.getText().toString().trim();
         String password = mEditPassword.getText().toString().trim();
 
+        boolean validEmail = isValidEmail(email);
+        boolean validName = isValidName(name);
+        boolean validPassword = isValidPassword(password);
+        if (!validEmail || !validName || !validPassword) return;
+
         if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             mProgress.setMessage("Signing Up");
             mProgress.show();
+
             mAuth.createUserWithEmailAndPassword(email,password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -99,6 +105,32 @@ public class MainActivity extends Activity implements View.OnClickListener {
             });
         }
     }
+
+    private boolean isValidEmail(String email) {
+        boolean isGoodEmail =
+                (email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches());
+        if (!isGoodEmail) {
+            mEditEmail.setError("Please enter a valid email address");
+            return false;
+        }
+        return isGoodEmail;
+    }
+
+    private boolean isValidName(String name) {
+        if (name.equals("")) {
+            mEditName.setError("Please enter your name");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidPassword(String password, String confirmPassword) {
+        if (password.length() < 6) {
+            mEditPassword.setError("Please create a password containing at least 6 characters");
+            return false;
+        }
+        return true;
+    }
+
 }
 
 
