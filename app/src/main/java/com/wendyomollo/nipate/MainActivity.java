@@ -123,7 +123,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
         return true;
     }
-    private boolean isValidPassword(String password, String confirmPassword) {
+    private boolean isValidPassword(String password) {
         if (password.length() < 6) {
             mEditPassword.setError("Please create a password containing at least 6 characters");
             return false;
