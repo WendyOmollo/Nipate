@@ -2,6 +2,8 @@ package com.wendyomollo.nipate;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -34,9 +36,16 @@ public class ArtistsActivity extends Activity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(ArtistsActivity.this,DetailsActivity.class);
                 startActivity(intent1);
-
             }
         });
 
         }
+
+            @Override
+            public boolean onCreateOptionsMenu(Menu menu) {
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.menu_main, menu);
+            return super.onCreateOptionsMenu(menu);
+            }
+
 }

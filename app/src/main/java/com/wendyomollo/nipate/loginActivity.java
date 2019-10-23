@@ -37,8 +37,8 @@ public class loginActivity extends Activity implements View.OnClickListener {
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser() == null){
-                    Intent  registerIntent = new Intent(loginActivity.this,MainActivity.class);
+                if (firebaseAuth.getCurrentUser() == null) {
+                    Intent registerIntent = new Intent(loginActivity.this, MainActivity.class);
                     registerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(registerIntent);
                 }
@@ -57,15 +57,9 @@ public class loginActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(loginActivity.this,ArtistsActivity.class);
+        Intent intent = new Intent(loginActivity.this, ArtistsActivity.class);
         startActivity(intent);
         finish();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 }
