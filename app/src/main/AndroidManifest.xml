@@ -7,7 +7,7 @@
     <application>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".loginActivity"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
@@ -15,13 +15,18 @@
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".loginActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".DetailsActivity"></activity>
-        <activity android:name=".ArtistsActivity"></activity>
+        <activity android:name=".ArtistsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wendyomollo.nipate.loginActivity" />
+        </activity>
+
     </application>
 
 </manifest>

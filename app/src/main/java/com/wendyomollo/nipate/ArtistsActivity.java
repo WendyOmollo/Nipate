@@ -38,7 +38,9 @@ public class ArtistsActivity extends Activity {
 
             public void onClick(View v) {
                 Intent intent1 = new Intent(ArtistsActivity.this,DetailsActivity.class);
+                intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent1);
+                finish();
             }
         });
 
@@ -63,6 +65,10 @@ public class ArtistsActivity extends Activity {
 
         private void logout() {
             FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(ArtistsActivity.this,loginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         }
 
 }

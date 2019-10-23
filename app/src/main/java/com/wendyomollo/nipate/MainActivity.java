@@ -3,6 +3,7 @@ package com.wendyomollo.nipate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
     @BindView(R.id.buttonView) Button mGoToLogin;
     @BindView(R.id.userName) EditText mEditName;
     @BindView(R.id.userEmail) EditText mEditEmail;
