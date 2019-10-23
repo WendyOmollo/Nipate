@@ -10,8 +10,6 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-import retrofit2.http.Tag;
-
 import static com.wendyomollo.nipate.BuildConfig.API_KEY;
 
 
