@@ -27,7 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.buttonView) Button mGoToLogin;
     @BindView(R.id.userName) EditText mEditName;
     @BindView(R.id.userEmail) EditText mEditEmail;
