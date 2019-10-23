@@ -98,19 +98,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             });
         }
     }
-//                @Override
-//                protected void onStart(){
-//                    super.onStart();
-//                    mAuth.addAuthStateListener(mAuthListener);
-//                }
-//
-//                @Override
-//                public void onStop() {
-//                    super.onStop();
-//                    if (mAuthListener != null) {
-//                        mAuth.removeAuthStateListener(mAuthListener);
-//                    }
-//                }
-
-
 }
+
+
