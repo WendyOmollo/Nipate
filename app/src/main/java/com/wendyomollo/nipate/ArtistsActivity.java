@@ -28,7 +28,6 @@ public class ArtistsActivity extends AppCompatActivity {
     ProgressBar mProgressBar;
 
     private ImageView imageView1,imageView2,imageView3,imageView4,imageView5,imageView6;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,8 +97,8 @@ public class ArtistsActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -125,5 +124,6 @@ public class ArtistsActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 
 }
