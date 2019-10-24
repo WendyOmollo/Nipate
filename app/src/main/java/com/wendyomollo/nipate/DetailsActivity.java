@@ -10,8 +10,6 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-import retrofit2.http.Tag;
-
 import static com.wendyomollo.nipate.BuildConfig.API_KEY;
 
 
@@ -32,8 +30,8 @@ public class DetailsActivity extends YouTubeBaseActivity {
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
                 youTubePlayer.loadPlaylist("RDU5ond3urCS0");
-                youTubePlayer.play();
             }
 
             @Override
