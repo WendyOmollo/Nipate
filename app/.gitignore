@@ -1,5 +1,4 @@
 
-
 *.iml
 .gradle
 /local.properties
@@ -23,5 +22,5 @@ gradle
 gradlew.bat
 gradlew
 settings.gradle
-.idea
 .idea/
+
