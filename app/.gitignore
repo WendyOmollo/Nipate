@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fdfcd581c1750305ddbedda0a531b1702288b889
 *.iml
 .gradle
 /local.properties
@@ -23,4 +27,8 @@ gradlew.bat
 gradlew
 settings.gradle
 .idea
+<<<<<<< HEAD
 .idea/
+=======
+.idea/
+>>>>>>> fdfcd581c1750305ddbedda0a531b1702288b889
