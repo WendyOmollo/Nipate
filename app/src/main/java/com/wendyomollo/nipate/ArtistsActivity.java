@@ -30,9 +30,11 @@ public class ArtistsActivity extends Activity {
         imageView1 = findViewById(R.id.artist1);
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
                 Intent intent1 = new Intent(ArtistsActivity.this,DetailsActivity.class);
                 startActivity(intent1);
+
             }
         });
 
