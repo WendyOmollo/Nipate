@@ -15,6 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true" />
+
     <Button
         android:id="@+id/playVideoView"
         android:layout_width="wrap_content"
@@ -27,7 +28,6 @@
         android:paddingRight="10dp"
         android:text="Play Video"
         android:textColor="@color/colorPrimaryText"
-        android:layout_below="@id/youtube_view"
-        />
+        android:layout_below="@id/youtube_view"/>
 
 </LinearLayout>
