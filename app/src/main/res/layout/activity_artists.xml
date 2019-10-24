@@ -18,16 +18,16 @@
             android:textStyle="bold|italic" />
 
     <GridLayout
-        android:layout_below="@id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
-        android:padding="14dp"
-        android:id="@+id/artistGrid"
-        android:columnOrderPreserved="false"
-        android:columnCount="2"
-        android:rowCount="3"
-        android:alignmentMode="alignMargins">
+            android:layout_below="@id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:padding="14dp"
+            android:id="@+id/artistGrid"
+            android:columnOrderPreserved="false"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins">
 
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
