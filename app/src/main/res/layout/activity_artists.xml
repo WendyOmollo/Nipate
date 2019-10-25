@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:text = "Isabelle"
                     android:textSize="16dp"
-                    android:textStyle="bold"
+                    android:textStyle="normal"
                     android:textAlignment="center"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

@@ -30,7 +30,7 @@ public class DetailsActivity extends YouTubeBaseActivity {
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo("RDU5ond3urCS0");
+                youTubePlayer.loadPlaylist("RDU5ond3urCS0");
                 youTubePlayer.play();
             }
 
