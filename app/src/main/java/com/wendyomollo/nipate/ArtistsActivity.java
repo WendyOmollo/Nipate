@@ -12,8 +12,10 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
@@ -35,6 +37,9 @@ public class ArtistsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_artists);
         ButterKnife.bind(this);
         Intent intent = getIntent();
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_bar);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
         imageView1 = findViewById(R.id.artist1);
         imageView2 = findViewById(R.id.artist2);
@@ -100,6 +105,25 @@ public class ArtistsActivity extends AppCompatActivity {
         });
 
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Activity selectedActivity = null;
+
+           switch (menuItem.getItemId()){
+               case R.id.navigation_home:
+                   selectedActivity = new ArtistsActivity();
+               break;
+
+               case R.id.navigation_videos:
+                   selectedActivity = new DetailsActivity();
+                   break;
+           }
+
+           return true;
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
