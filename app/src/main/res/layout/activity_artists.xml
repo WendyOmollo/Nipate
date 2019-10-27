@@ -18,212 +18,6 @@
             android:textSize="40sp"
             android:textStyle="bold|italic" />
 
-<!--    <GridLayout-->
-<!--            android:layout_below="@id/textView"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_weight="8"-->
-<!--            android:padding="14dp"-->
-<!--            android:id="@+id/artistGrid"-->
-<!--            android:columnOrderPreserved="false"-->
-<!--            android:columnCount="2"-->
-<!--            android:rowCount="3"-->
-<!--            android:alignmentMode="alignMargins">-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:src="@drawable/artist1"-->
-<!--                    android:id="@+id/artist1"-->
-<!--                    android:layout_gravity="center_horizontal"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text = "Isabelle"-->
-<!--                    android:textSize="16dp"-->
-<!--                    android:textStyle="normal"-->
-<!--                    android:textAlignment="center"/>-->
-<!--            </LinearLayout>-->
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:src="@drawable/artist2"-->
-<!--                    android:id="@+id/artist2"-->
-<!--                    android:layout_gravity="center_horizontal"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text = "Monica"-->
-<!--                    android:textSize="16dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAlignment="center"/>-->
-<!--            </LinearLayout>-->
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:src="@drawable/artist3"-->
-<!--                    android:id="@+id/artist3"-->
-<!--                    android:layout_gravity="center_horizontal"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text = "Angela"-->
-<!--                    android:textSize="16dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAlignment="center"/>-->
-<!--            </LinearLayout>-->
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:src="@drawable/artist7"-->
-<!--                    android:id="@+id/artist4"-->
-<!--                    android:layout_gravity="center_horizontal"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text = "Vanessa"-->
-<!--                    android:textSize="16dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAlignment="center"/>-->
-<!--            </LinearLayout>-->
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:src="@drawable/artist8"-->
-<!--                    android:id="@+id/artist8"-->
-<!--                    android:layout_gravity="center_horizontal"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text = "Brenda"-->
-<!--                    android:textSize="16dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAlignment="center"/>-->
-<!--            </LinearLayout>-->
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--        <androidx.cardview.widget.CardView-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_columnWeight="1"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:layout_rowWeight="1"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="16dp">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                android:layout_margin="16dp"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:src="@drawable/artist5"-->
-<!--                    android:id="@+id/artist5"-->
-<!--                    android:layout_gravity="center_horizontal"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text = "Matt"-->
-<!--                    android:textSize="16dp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textAlignment="center"/>-->
-<!--            </LinearLayout>-->
-<!--        </androidx.cardview.widget.CardView>-->
-
-<!--    </GridLayout>-->
-
     <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
@@ -239,13 +33,219 @@
             android:layout_centerInParent="true"
             android:layout_margin="16dp"
             android:visibility="gone" />
-    <FrameLayout
-        android:id="@+id/fragments_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation_bar">
+<!--    <FrameLayout-->
+<!--        android:id="@+id/fragments_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/bottom_navigation_bar">-->
 
-    </FrameLayout>
+<!--        <GridLayout-->
+<!--            android:layout_below="@id/textView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="8"-->
+<!--            android:padding="14dp"-->
+<!--            android:id="@+id/artistGrid"-->
+<!--            android:columnOrderPreserved="false"-->
+<!--            android:columnCount="2"-->
+<!--            android:rowCount="3"-->
+<!--            android:alignmentMode="alignMargins">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:src="@drawable/artist1"-->
+<!--                        android:id="@+id/artist1"-->
+<!--                        android:layout_gravity="center_horizontal"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text = "Isabelle"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="normal"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:src="@drawable/artist2"-->
+<!--                        android:id="@+id/artist2"-->
+<!--                        android:layout_gravity="center_horizontal"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text = "Monica"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:src="@drawable/artist3"-->
+<!--                        android:id="@+id/artist3"-->
+<!--                        android:layout_gravity="center_horizontal"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text = "Angela"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:src="@drawable/artist7"-->
+<!--                        android:id="@+id/artist4"-->
+<!--                        android:layout_gravity="center_horizontal"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text = "Vanessa"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:src="@drawable/artist8"-->
+<!--                        android:id="@+id/artist8"-->
+<!--                        android:layout_gravity="center_horizontal"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text = "Brenda"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="100dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:src="@drawable/artist5"-->
+<!--                        android:id="@+id/artist5"-->
+<!--                        android:layout_gravity="center_horizontal"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text = "Matt"-->
+<!--                        android:textSize="16dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"/>-->
+<!--                </LinearLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--        </GridLayout>-->
+
+<!--    </FrameLayout>-->
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation_bar"
