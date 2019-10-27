@@ -38,8 +38,13 @@ public class ArtistsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Intent intent = getIntent();
 
+
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
 
         imageView1 = findViewById(R.id.artist1);
         imageView2 = findViewById(R.id.artist2);
@@ -113,11 +118,13 @@ public class ArtistsActivity extends AppCompatActivity {
 
            switch (menuItem.getItemId()){
                case R.id.navigation_home:
-                   selectedActivity = new ArtistsActivity();
+                   Intent intent = new Intent(ArtistsActivity.this,ArtistsActivity.class);
+                   startActivity(intent);
                break;
 
                case R.id.navigation_videos:
-                   selectedActivity = new DetailsActivity();
+                   Intent intentVideos = new Intent(ArtistsActivity.this,DetailsActivity.class);
+                   startActivity(intentVideos);
                    break;
            }
 
