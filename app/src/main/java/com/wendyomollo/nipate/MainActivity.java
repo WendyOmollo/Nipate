@@ -3,11 +3,12 @@ package com.wendyomollo.nipate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +22,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 import butterknife.BindView;
@@ -34,10 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.userPassword) EditText mEditPassword;
     @BindView(R.id.loginLink) TextView login;
 
+    public FirebaseDatabase mRef;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mProgress;
-    private DatabaseReference mDatabase;
+    private String memberName;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,10 +74,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        final String name = mEditName.getText().toString().trim();
        final String email = mEditEmail.getText().toString().trim();
         String password = mEditPassword.getText().toString().trim();
+        memberName = mEditName.getText().toString().trim();
 
         boolean validEmail = isValidEmail(email);
         boolean validName = isValidName(name);
         boolean validPassword = isValidPassword(password);
+        boolean validMemberName = isValidName(memberName);
+
         if (!validEmail || !validName || !validPassword) return;
 
         if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
@@ -86,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if(task.isSuccessful()){
                         mProgress.dismiss();
                         Toast.makeText(MainActivity.this,"Authentication successful",Toast.LENGTH_LONG).show();
+                        createFirebaseUserProfile(task.getResult().getUser());
                         Intent intent = new Intent(MainActivity.this, loginActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
@@ -97,6 +107,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
         }
+    }
+
+    private void createFirebaseUserProfile(final FirebaseUser user) {
+        UserProfileChangeRequest addProfileName = new UserProfileChangeRequest.Builder()
+                .setDisplayName(memberName)
+                .build();
+
+        user.updateProfile(addProfileName)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Log.d("Welcome",user.getDisplayName());
+                        }
+                    }
+                });
+
     }
 
     private boolean isValidEmail(String email) {
@@ -124,6 +151,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
-}
 
+}
 
