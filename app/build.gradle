@@ -46,16 +46,26 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    //Google analytics
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
+    //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation "com.google.android.material:material:1.0.0"
+    //Recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //Youtube Jar file
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //Firebase Authentication
     implementation 'com.google.firebase:firebase-auth:19.1.0'
+    //Realtime Database
     implementation 'com.google.firebase:firebase-database:19.2.0'
+    //Cloud Storage
     implementation 'com.google.firebase:firebase-storage:19.1.0'
+    //Firebase Cloudstore
+    implementation 'com.google.firebase:firebase-firestore:21.2.1'
 }
-
+//Google services
 apply plugin: 'com.google.gms.google-services'
