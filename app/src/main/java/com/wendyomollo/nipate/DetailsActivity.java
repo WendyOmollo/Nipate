@@ -31,7 +31,6 @@ public class DetailsActivity extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        Intent intent = getIntent();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation_bar);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
@@ -65,7 +64,6 @@ public class DetailsActivity extends YouTubeBaseActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Activity selectedActivity = null;
 
             switch (menuItem.getItemId()){
                 case R.id.navigation_home:
@@ -73,13 +71,12 @@ public class DetailsActivity extends YouTubeBaseActivity {
                     startActivity(intent);
                     break;
 
-                case R.id.navigation_videos:
-                    Intent intentVideos = new Intent(DetailsActivity.this,DetailsActivity.class);
-                    startActivity(intentVideos);
-                    break;
+//                case R.id.navigation_videos:
+//                    Intent intentVideos = new Intent(DetailsActivity.this,DetailsActivity.class);
+//                    startActivity(intentVideos);
+//                    break;
             }
-
-            return true;
+            return false;
         }
     };
 

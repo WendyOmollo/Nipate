@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -51,7 +50,7 @@ public class ArtistsActivity extends AppCompatActivity {
         imageView3 = findViewById(R.id.artist3);
         imageView4 = findViewById(R.id.artist4);
         imageView5 = findViewById(R.id.artist8);
-        imageView6 = findViewById(R.id.artist5);
+        imageView6 = findViewById(R.id.artist9);
 
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,10 +116,10 @@ public class ArtistsActivity extends AppCompatActivity {
                 Activity selectedActivity = null;
 
            switch (menuItem.getItemId()){
-               case R.id.navigation_home:
-                   Intent intent = new Intent(ArtistsActivity.this,ArtistsActivity.class);
-                   startActivity(intent);
-               break;
+//               case R.id.navigation_home:
+//                   Intent intent = new Intent(ArtistsActivity.this,ArtistsActivity.class);
+//                   startActivity(intent);
+//               break;
 
                case R.id.navigation_videos:
                    Intent intentVideos = new Intent(ArtistsActivity.this,DetailsActivity.class);

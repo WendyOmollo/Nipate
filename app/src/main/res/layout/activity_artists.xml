@@ -79,7 +79,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text = "Isabelle"
-                        android:textSize="16dp"
+                        android:textSize="12dp"
                         android:textStyle="normal"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -111,7 +111,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text = "Monica"
-                        android:textSize="16dp"
+                        android:textSize="12dp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -142,7 +142,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text = "Angela"
-                        android:textSize="16dp"
+                        android:textSize="12dp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -173,7 +173,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text = "Vanessa"
-                        android:textSize="16dp"
+                        android:textSize="12dp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -204,7 +204,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text = "Brenda"
-                        android:textSize="16dp"
+                        android:textSize="12dp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
                 </LinearLayout>
@@ -235,7 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text = "Polly"
-                        android:textSize="16dp"
+                        android:textSize="12dp"
                         android:textStyle="bold"
                         android:textAlignment="center"/>
                 </LinearLayout>
