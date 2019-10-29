@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -16,15 +19,16 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import java.util.Vector;
+
 import static com.wendyomollo.nipate.BuildConfig.API_KEY;
 
 
 
-public class DetailsActivity extends YouTubeBaseActivity {
+public class DetailsActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    Vector<YoutubeVideos> youtubeVideos = new Vector<>();
     private static final String TAG = "Main Activity";
-    private Button b;
-    private YouTubePlayerView youTubePlayerView;
-    private YouTubePlayer.OnInitializedListener onInitializedListener;
 
 
     @Override
@@ -38,27 +42,18 @@ public class DetailsActivity extends YouTubeBaseActivity {
         MenuItem menuItem = menu.getItem(1);
         menuItem.setChecked(true);
 
-        youTubePlayerView = findViewById(R.id.youtube_view);
-        onInitializedListener = new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadPlaylist("RDU5ond3urCS0");
-                youTubePlayer.play();
-            }
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-                Log.d(TAG,"Failed to initialize");
-            }
-        };
+        youtubeVideos.add(new YoutubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https:www.youtube.com/embed/wcokc1sM-TU\" frameborder=\"0\" allowFullScreenSize></iframe>"));
+        youtubeVideos.add(new YoutubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https:www.youtube.com/embed/5dRtKakefZ8\" frameborder=\"0\" allowFullScreenSize></iframe>"));
+        youtubeVideos.add(new YoutubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https:www.youtube.com/embed/TNIMIUtz9OE\" frameborder=\"0\" allowFullScreenSize></iframe>"));
+        youtubeVideos.add(new YoutubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https:www.youtube.com/embed/33yIPTvURfk\" frameborder=\"0\" allowFullScreenSize></iframe>"));
+        youtubeVideos.add(new YoutubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https:www.youtube.com/embed/PMEGUx7MfCM\" frameborder=\"0\" allowFullScreenSize></iframe>"));
 
-        b = findViewById(R.id.playVideoView);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                youTubePlayerView.initialize(API_KEY,onInitializedListener);
-            }
-        });
+        SongArrayAdapter songArrayAdapter = new SongArrayAdapter(youtubeVideos);
+        recyclerView.setAdapter(songArrayAdapter);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
