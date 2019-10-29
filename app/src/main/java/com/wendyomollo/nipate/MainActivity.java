@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.auth.User;
+
 
 
 import butterknife.BindView;
@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mProgress;
     private String memberName;
+    DatabaseReference databaseReference;
+
+
+
 
 
     @Override
@@ -57,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         mGoToLogin.setOnClickListener(this);
 
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("artists");
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,16 +75,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         startRegister();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String uid = user.getUid();
-        DatabaseReference mDatabase = FirebaseDatabase
-                .getInstance()
-                .getReference()
-                .child(uid);
+        addArtist();
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        String uid = user.getUid();
+//        DatabaseReference mDatabase = FirebaseDatabase
+//                .getInstance()
+//                .getReference()
+//                .child(uid);
+//
+//        DatabaseReference pushRef = mDatabase.push();
+//        String pushId = pushRef.getKey();
+//        mDatabase.child(pushId).setValue(user);
 
-        DatabaseReference pushRef = mDatabase.push();
-        String pushId = pushRef.getKey();
-        mDatabase.child(pushId).setValue(user);
+    }
+
+    private void addArtist() {
+        String name = mEditName.getText().toString().trim();
+        String email = mEditEmail.getText().toString().trim();
+        String password = mEditPassword.getText().toString().trim();
+
+        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+            String id = databaseReference.push().getKey();
+
+            Artist  artist = new Artist(id,name,email,password);
+            databaseReference.child(id).setValue("students");
+            mEditName.setText("");
+            mEditEmail.setText("");
+            mEditPassword.setText("");
+
+        }else{
+            Toast.makeText(MainActivity.this,"Authentication failed",Toast.LENGTH_SHORT).show();
+        }
+
 
     }
 
