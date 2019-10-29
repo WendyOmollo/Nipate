@@ -3,16 +3,21 @@ package com.wendyomollo.nipate;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -25,6 +30,10 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
 
     @BindView(R.id.signupLink)
     TextView signup;
+    @BindView(R.id.userLoginEmail)
+    EditText mUserEmail;
+    @BindView(R.id.userLoginPassword)
+    EditText mUserPassword;
     @BindView(R.id.loginButtonView)
     Button mlogin;
 
@@ -62,9 +71,40 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        loginWithPassword();
+        
         Intent intent = new Intent(loginActivity.this, ArtistsActivity.class);
         startActivity(intent);
         finish();
     }
 
+    private void loginWithPassword() {
+        String email = mUserEmail.getText().toString().trim();
+        String password = mUserPassword.getText().toString().trim();
+        if (email.equals("")) {
+            mUserEmail.setError("Please enter your email");
+            return;
+        }
+        if (password.equals("")) {
+            mUserPassword.setError("Password cannot be blank");
+            return;
+        }
+
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Log.d("Please wait", "signInWithEmail:onComplete:" + task.isSuccessful());
+                        if (!task.isSuccessful()) {
+                            Log.w("Please wait", "signInWithEmail", task.getException());
+                            Toast.makeText(loginActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
+
 }
+

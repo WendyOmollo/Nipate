@@ -66,6 +66,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     //Firebase Cloudstore
     implementation 'com.google.firebase:firebase-firestore:21.2.1'
+    //Swipe decorator
+    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.2'
 }
 //Google services
 apply plugin: 'com.google.gms.google-services'

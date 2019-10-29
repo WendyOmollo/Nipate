@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.auth.User;
 
 
 import butterknife.BindView;
@@ -68,6 +69,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         startRegister();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+        DatabaseReference mDatabase = FirebaseDatabase
+                .getInstance()
+                .getReference()
+                .child(uid);
+
+        DatabaseReference pushRef = mDatabase.push();
+        String pushId = pushRef.getKey();
+        mDatabase.child(pushId).setValue(user);
+
     }
 
     private void startRegister() {
