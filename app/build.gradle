@@ -27,6 +27,7 @@ android {
     }
     buildTypes.each {
         it.buildConfigField 'String', 'API_KEY', key
+        it.buildConfigField 'String', 'EVENTS_API_KEY',eventApi
     }
 
 }
