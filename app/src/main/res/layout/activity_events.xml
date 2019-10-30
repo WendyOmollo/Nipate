@@ -12,12 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_alignCenterInParent="true"
         android:background="@color/colorPrimaryLight"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="Search events"
-        android:textColor="@color/colorPrimaryText"
-        />
+        android:textColor="@color/colorPrimaryText" />
 
     <ListView
         android:layout_width="match_parent"
