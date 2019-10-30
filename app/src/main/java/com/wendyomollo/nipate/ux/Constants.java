@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.ux;
 
 import com.wendyomollo.nipate.BuildConfig;
 

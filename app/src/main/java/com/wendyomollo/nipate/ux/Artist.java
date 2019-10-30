@@ -1,4 +1,4 @@
-package com.wendyomollo.nipate;
+package com.wendyomollo.nipate.ux;
 
 public class Artist {
     private String user_id;

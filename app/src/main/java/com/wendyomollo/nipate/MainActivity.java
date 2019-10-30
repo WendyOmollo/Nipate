@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.wendyomollo.nipate.ux.Artist;
 
 
 import butterknife.BindView;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         mGoToLogin.setOnClickListener(this);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("artists");
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,17 +76,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         startRegister();
         addArtist();
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        String uid = user.getUid();
-//        DatabaseReference mDatabase = FirebaseDatabase
-//                .getInstance()
-//                .getReference()
-//                .child(uid);
-//
-//        DatabaseReference pushRef = mDatabase.push();
-//        String pushId = pushRef.getKey();
-//        mDatabase.child(pushId).setValue(user);
-
     }
 
     private void addArtist() {
@@ -97,8 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             String id = databaseReference.push().getKey();
 
-            Artist  artist = new Artist(id,name,email,password);
-            databaseReference.child(id).setValue("students");
+            Artist artist = new Artist(id,name,email,password);
+            databaseReference.child(id).setValue("artists");
             mEditName.setText("");
             mEditEmail.setText("");
             mEditPassword.setText("");
@@ -126,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             mProgress.setMessage("Signing Up");
             mProgress.show();
-
             mAuth.createUserWithEmailAndPassword(email,password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -134,8 +122,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     if(task.isSuccessful()){
                         mProgress.dismiss();
+
                         Toast.makeText(MainActivity.this,"Authentication successful",Toast.LENGTH_LONG).show();
-                        createFirebaseUserProfile(task.getResult().getUser());
                         Intent intent = new Intent(MainActivity.this, loginActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
@@ -147,23 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
         }
-    }
-
-    private void createFirebaseUserProfile(final FirebaseUser user) {
-        UserProfileChangeRequest addProfileName = new UserProfileChangeRequest.Builder()
-                .setDisplayName(memberName)
-                .build();
-
-        user.updateProfile(addProfileName)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Log.d("Welcome",user.getDisplayName());
-                        }
-                    }
-                });
-
     }
 
     private boolean isValidEmail(String email) {
